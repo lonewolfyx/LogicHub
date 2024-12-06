@@ -1,6 +1,6 @@
-# VueFlow
+# LogicHub
 
-VueFlow 顾名思义为 Vue 相关流程
+通过直观的可视化画板形式展示前端某框架核心 API 流程逻辑与数据流
 
 # 快速开始
 
