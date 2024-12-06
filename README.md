@@ -20,6 +20,6 @@ npm run build
 
 # FAQ
 
-### 既然使用了 React Excaildraw 为什么不使用 React 开发？
+### 既然使用了 React Excalidraw 为什么不使用 React 开发？
 
 Vue YYDS
