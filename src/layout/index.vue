@@ -13,37 +13,39 @@
                 @menuItemClick="onClickMenuItem"
             >
                 <a-menu-item v-for="item in menus" :key="item">
-                    <IconBranch/>
+                    <IconBranch />
                     {{ item }}
                 </a-menu-item>
             </a-menu>
         </a-layout-sider>
         <a-layout>
             <a-layout class="m-3 p-3">
-                <a-layout-content>flow</a-layout-content>
+                <a-layout-content>
+                    <RouterView />
+                </a-layout-content>
             </a-layout>
         </a-layout>
     </a-layout>
 </template>
 
 <script setup>
-import {IconBranch} from '@arco-design/web-vue/es/icon';
+import { IconBranch } from "@arco-design/web-vue/es/icon";
 
-import {Message} from "@arco-design/web-vue";
+import { Message } from "@arco-design/web-vue";
 
 const collapsed = ref(false);
 
 const menus = [
-    'ref', 'reactive', 'computed', 'watch', 'watchEffect', 'nextTick', 'lifecycle', 'render', 'h'
-]
+    "ref", "reactive", "computed", "watch", "watchEffect", "nextTick", "lifecycle", "render", "h",
+];
 
 const onCollapse = () => {
     collapsed.value = !collapsed.value;
 };
 
 const onClickMenuItem = (key) => {
-    Message.info({content: `You select ${key}`, showIcon: true});
-}
+    Message.info({ content: `You select ${key}`, showIcon: true });
+};
 
 </script>
 
@@ -91,7 +93,6 @@ const onClickMenuItem = (key) => {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    //color: var(--color-white);
     font-size: 16px;
     font-stretch: condensed;
     text-align: center;
